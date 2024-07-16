@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Subjects</title>
+</head>
+<body>
+    <h1>Subjects</h1>
+    <ul>
+        {% for subject in subjects %}
+            <li><a href="{{ url_for('subject_description', subject_id=subject.id) }}">{{ subject.name }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
